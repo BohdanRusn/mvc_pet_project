@@ -1,0 +1,25 @@
+<style>
+    .listWrapper {
+        display: grid;
+        gap: 40px;
+        grid-template-columns: repeat(auto-fill, minmax(620px, 1fr));
+    }
+    .itemWrapper {
+        padding: 25px;
+        display: grid;
+        gap: 5px;
+        background-color: khaki;
+    }
+</style>
+
+
+<div class="listWrapper">
+    <% newBuilds.map(newBuild => { %>
+        <div class="itemWrapper">
+            <div><img src="<%= newBuild.img_620x460 %>" alt=""></div>
+            <div><%= newBuild.name %></div>
+            <div><%= newBuild.priceFormated %></div>
+            <div><a href="<%= `/newbuild-${newBuild.newbuildId}` %>">Go to NewBuild page.</a></div>
+        </div>
+    <%}) %>
+</div>

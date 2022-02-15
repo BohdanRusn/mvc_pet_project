@@ -1,0 +1,23 @@
+{
+  "name": "ejsexampleproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.18.0",
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "koa": "^2.13.4",
+    "koa-ejs": "^4.3.0",
+    "koa-router": "^10.1.1",
+    "node-fetch": "^2.6.0"
+  }
+}

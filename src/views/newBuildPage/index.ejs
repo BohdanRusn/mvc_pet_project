@@ -1,0 +1,42 @@
+<!--
+<style>
+    .itemWrapper {
+        padding: 25px;
+        display: grid;
+        gap: 5px;
+        background-color: khaki;
+    }
+</style>
+
+
+<div class="itemWrapper">
+    <div><%= newBuild.name %></div>
+    <div><img src="<%= newBuild.img_620x460 %>" alt=""></div>
+    <div><%= newBuild.newbuildId %></div>
+    <div><%= newBuild.priceFormated %></div>
+</div>-->
+
+<style>
+    .listWrapper {
+        display: grid;
+        gap: 40px;
+        grid-template-columns: repeat(auto-fill, minmax(620px, 1fr));
+    }
+    .itemWrapper {
+        padding: 25px;
+        display: grid;
+        gap: 5px;
+        background-color: khaki;
+    }
+</style>
+
+
+<div class="listWrapper">
+    <% newBuild.map(currentNewBuild => { %>
+        <div class="itemWrapper">
+            <div><img src="<%= currentNewBuild.img_620x460 %>" alt=""></div>
+            <div><%= currentNewBuild.name %></div>
+            <div><%= currentNewBuild.priceFormated %></div>
+        </div>
+    <%}) %>
+</div>
